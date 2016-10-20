@@ -19,7 +19,6 @@ export default class Sortable extends React.Component {
             return <Todo finished={finished} key={todo.id} item={todo}/>
         });
 
-        console.log(this.totodoLeft);
         return <ul id="todo_list" class="list-unstyled">{todosComponents}</ul>
     }
 }

@@ -4,8 +4,6 @@ import { connect } from "react-redux"
 
 export default class Todo extends React.Component {
     render() {
-        console.log(this.props);
-
         var checked = this.props.finished ? "checked" : "";
 
         return <li class="ui-state-default">
