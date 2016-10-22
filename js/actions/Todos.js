@@ -10,9 +10,9 @@ export function addTodo(title) {
 }
 
 export function updateTodo(id) {
-    return { type: 'UPDATE_TODO', details: id}
+    return { type: 'UPDATE_TODO', id: id}
 }
 
 export function deleteTodo(id) {
-    return { type: 'DELETE_TODO', details: id}
+    return { type: 'DELETE_TODO', id: id}
 }

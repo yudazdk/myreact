@@ -23,7 +23,10 @@ export default function reducer(
             return state
 
         case 'DELETE_TODO':
-            return state
+            return {
+                ...state,
+                todos: state.todos.filter(todo => todo.id !== action.id),
+            }
 
         default:
             return state
