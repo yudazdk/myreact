@@ -1,8 +1,8 @@
-export function addTodo(title) {
+export function addTodo(text) {
     return {
         type: 'ADD_TODO',
         details: {
-            text: title,
+            text: text,
             finished: false,
             id: new Date().getTime()
         },

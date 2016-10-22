@@ -4,8 +4,8 @@ import { Provider } from "react-redux"
 import store from "./store"
 import Sortable from "./components/Sortable"
 
-const sortable = document.getElementById('sortable')
+const app = document.getElementById('app')
 
 ReactDOM.render(<Provider store={store}>
     <Sortable />
-</Provider>, sortable);
+</Provider>, app);
