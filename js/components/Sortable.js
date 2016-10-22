@@ -1,6 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import Todo from './Todo'
+import AddTodo from './AddTodo'
 
 
 @connect((store) => {
@@ -30,10 +31,7 @@ export default class Sortable extends React.Component {
 
         return <div>
             <h1>Todos</h1>
-            <div class="new-todo">
-                <input type="text" class="form-control add-todo" placeholder="New todo"/>
-                <span><button class="btn btn-success pull-left">Add Todo</button></span>
-            </div>
+            <AddTodo />
             <hr/>
             <ul id="todo_list" class="list-unstyled">{todosComponents}</ul>
             <div class="todo-footer">
