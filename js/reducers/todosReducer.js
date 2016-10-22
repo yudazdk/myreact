@@ -17,7 +17,10 @@ export default function reducer(
 
     switch (action.type) {
         case 'ADD_TODO':
-            return state
+            return {
+                ...state,
+                todos: [...state.todos, action.details],
+            }
 
         case 'UPDATE_TODO':
             const { id, finished } = action.details
