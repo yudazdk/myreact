@@ -20,7 +20,16 @@ export default function reducer(
             return state
 
         case 'UPDATE_TODO':
-            return state
+            const { id, finished } = action.details
+            const newTodos = [...state.todos]
+            const todoToUpdate = newTodos.findIndex(todo => todo.id === id)
+
+            newTodos[todoToUpdate].finished = finished
+
+            return {
+                ...state,
+                todos: newTodos,
+            }
 
         case 'DELETE_TODO':
             return {

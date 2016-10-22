@@ -3,3 +3,4 @@ node_modules/*
 npm-debug.log
 package.json
 webpack.config.js
+js/client.min.js
