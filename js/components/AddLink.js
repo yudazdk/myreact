@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
+import { IndexLink, Link } from "react-router";
 
 @connect((store) => {
     return {
@@ -11,7 +12,7 @@ import { connect } from "react-redux"
 export default class AddLink extends React.Component {
     render() {
         return <div class="new-todo">
-            <span><button class="btn btn-success pull-left">Add Todo</button></span>
+            <Link to='/new'>Add Todo</Link>
         </div>
     }
 }

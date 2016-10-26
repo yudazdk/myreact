@@ -1,5 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
+import { IndexLink, Link } from "react-router";
+import { hashHistory } from 'react-router';
+
 import { addTodo } from "../actions/Todos"
 
 
@@ -14,11 +17,15 @@ export default class AddTodo extends React.Component {
     onAddClick() {
         var todoTitle = document.getElementById('add_todo').value;
 
+        console.log(this);
+
         if ( todoTitle ) {
             // Clear before dispatching
             document.getElementById('add_todo').value = '';
 
             this.props.dispatch( addTodo(todoTitle) );
+
+            hashHistory.push('/');
         }
     }
 
