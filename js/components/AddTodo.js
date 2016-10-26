@@ -17,8 +17,6 @@ export default class AddTodo extends React.Component {
     onAddClick() {
         var todoTitle = document.getElementById('add_todo').value;
 
-        console.log(this);
-
         if ( todoTitle ) {
             // Clear before dispatching
             document.getElementById('add_todo').value = '';
