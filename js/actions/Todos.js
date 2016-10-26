@@ -21,6 +21,17 @@ export function updateTodo(id, updatedFinished) {
 }
 
 
+export function updateTodoText(id, todoText) {
+    return {
+        type: 'UPDATE_TODO2',
+        details: {
+            id: id,
+            text: todoText
+        }
+    }
+}
+
+
 export function deleteTodo(id) {
     return { type: 'DELETE_TODO', id: id}
 }

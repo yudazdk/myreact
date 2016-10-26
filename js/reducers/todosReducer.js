@@ -15,6 +15,12 @@ export default function reducer(
         ]
     }, action) {
 
+    var id = 0;
+    var finished = false
+    var newTodos = [...state.todos];
+    var todoToUpdate = 0;
+    var textTodo = '';
+
     switch (action.type) {
         case 'ADD_TODO':
             return {
@@ -23,16 +29,26 @@ export default function reducer(
             }
 
         case 'UPDATE_TODO':
-            const { id, finished } = action.details
-            const newTodos = [...state.todos]
-            const todoToUpdate = newTodos.findIndex(todo => todo.id === id)
+        case 'UPDATE_TODO2':
+            id = action.details.id
 
-            newTodos[todoToUpdate].finished = finished
+            newTodos = [...state.todos]
+            todoToUpdate = newTodos.findIndex(todo => todo.id == id)
+
+            if ( action.type == 'UPDATE_TODO') {
+                finished = action.details.finished
+                newTodos[todoToUpdate].finished = finished
+            } else {
+                textTodo = action.details.text
+                newTodos[todoToUpdate].text = textTodo
+            }
+
 
             return {
                 ...state,
                 todos: newTodos,
             }
+
 
         case 'DELETE_TODO':
             return {
