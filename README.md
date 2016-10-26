@@ -22,6 +22,11 @@ First install node js
    #Run the following command
    npm update --save
 
+3. For routing
+   #npm install -S react-router
+   #npm install -S history@1
+
+
 Errors
 ------
 1. ERROR in Entry module not found: Error: Cannot resolve module 'babel-loader' in C:\xampp\htdocs\myreact

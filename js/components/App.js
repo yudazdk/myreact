@@ -1,7 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
+
 import Todo from './Todo'
-import AddTodo from './AddTodo'
+import AddLink from './AddLink'
 
 
 @connect((store) => {
@@ -31,7 +32,7 @@ export default class App extends React.Component {
 
         return <div>
             <h1>Todos</h1>
-            <AddTodo />
+            <AddLink />
             <hr/>
             <ul id="todo_list" class="list-unstyled">{todosComponents}</ul>
             <div class="todo-footer">
